@@ -20,7 +20,9 @@ class MyWidget(QMainWindow):
         
     def draw_circle(self):
         rad = randint(20, 100)
-        self.qp.setBrush(QColor(255, 255, 0))
+        pen = self.qp.pen()
+        pen.setColor(QColor(255, 255, 0))
+        self.qp.setPen(pen)
         self.qp.drawEllipse(int(250 - rad / 2),
                             int(300 - rad / 2), rad, rad)
         
