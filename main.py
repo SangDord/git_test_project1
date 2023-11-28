@@ -23,8 +23,7 @@ class MyWidget(QMainWindow):
         pen = self.qp.pen()
         pen.setColor(QColor(255, 255, 0))
         self.qp.setPen(pen)
-        self.qp.drawEllipse(int(250 - rad / 2),
-                            int(300 - rad / 2), rad, rad)
+        self.qp.drawEllipse(randint(0, 500 - 2 * rad), randint(0, 600 - 2 * rad), rad, rad)
         
     def paintEvent(self, event):
         if self.flag:
